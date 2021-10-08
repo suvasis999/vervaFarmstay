@@ -9,7 +9,7 @@ import { NextPage, GetStaticProps } from 'next';
  
     React.useEffect(function effectFunction() {
         async function fetchMenu() {
-            const url = `http://vervefarmstay.moodishare.com:80/api/web_page/allPage`;
+            const url = `https://vervefarmstay.moodishare.com:80/api/web_page/allPage`;
             
             const res = await fetch(url, {
             method: 'GET',
