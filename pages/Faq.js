@@ -123,4 +123,7 @@ import FAQ from '../component/FAQ';
     )
 }
 
-export default Faq
+export default Faq;
+
+
+
