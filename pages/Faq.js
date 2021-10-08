@@ -14,9 +14,9 @@ import Hr from '../component/Hr';
 import FAQ from '../component/FAQ';
 
  const Faq = () => {
-    const [faqData, setfaqData] = useState([]);
-    const [faqDataB, setfaqDataB] = useState(Sample_data.faqDataB);
-    const [isOpen, toggleOpen] = useState(-1);
+    const [faqData, setfaqData] = React.useState([]);
+    const [faqDataB, setfaqDataB] = React.useState(Sample_data.faqDataB);
+    const [isOpen, toggleOpen] = React.useState(-1);
     React.useEffect(function effectFunction() {
       async function fetchFaq() {
          // const url = `http://192.168.0.106/farm/api/Web_faq/allFaq`;
