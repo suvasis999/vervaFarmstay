@@ -13,7 +13,7 @@ import Product from '../component/Product';
 import Hr from '../component/Hr';
 import FAQ from '../component/FAQ';
 
-export const faq = () => {
+ const faq = () => {
     const [faqData, setfaqData] = useState([]);
     const [faqDataB, setfaqDataB] = useState(Sample_data.faqDataB);
     const [isOpen, toggleOpen] = useState(-1);
