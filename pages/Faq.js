@@ -20,7 +20,7 @@ import FAQ from '../component/FAQ';
     React.useEffect(function effectFunction() {
       async function fetchFaq() {
          // const url = `http://192.168.0.106/farm/api/Web_faq/allFaq`;
-         const url=`http://vervefarmstay.moodishare.com:80/api/web_faq/allFaq`
+         const url=`https://moodishare.com:443/farm/api/web_faq/allFaq`
          
           const res = await fetch(url, {
           method: 'GET',
