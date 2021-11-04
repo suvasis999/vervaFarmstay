@@ -29,9 +29,7 @@ export const Footer = () => {
                 
             })
             }
-            if(props.bgColor=='blue'){
-                setColorchange(true);
-            }
+            
             fetchMenu();
     }, []);
     return (
