@@ -12,7 +12,8 @@ function Content_page(props) {
           background: "linear-gradient(to bottom, rgba(21,112,67, .80) 30%, rgba(0,0,0, .80) 80%),  url(" +localhost+"uploads/web_content/" + props.bg +")",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          color:'white'
+          color:'white',
+          minHeight:600+'px'
         }}
           >
             <p style={{height: '25%'}}></p>
@@ -45,7 +46,8 @@ function Content_page(props) {
            :
            <div className="my-auto d-none d-md-block text-center px-5 pd-100"
            style={{  
-           color:'black'
+           color:'black',
+           minHeight:600+'px'
         }}
            >
             <p style={{height: '25%'}}></p>
