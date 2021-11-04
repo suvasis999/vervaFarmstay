@@ -12,7 +12,7 @@ import Project from '../component/Project';
 import { useRouter } from 'next/router';
 import Content_page from '../component/Content_page';
 import {localhost} from '../config/localhost';
-const index = () => {
+const Index = () => {
   const [page, setPage] = React.useState([]); 
     const [product, setProduct] = React.useState([]); 
 
@@ -98,4 +98,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index
