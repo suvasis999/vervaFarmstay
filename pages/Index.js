@@ -13,8 +13,8 @@ import { useRouter } from 'next/router';
 import Content_page from '../component/Content_page';
 import {localhost} from '../config/localhost';
 const Home = () => {
-  const [page, setPage] = React.useState([]); 
-    const [product, setProduct] = React.useState([]); 
+ {/*} const [page, setPage] = React.useState([]); 
+  const [product, setProduct] = React.useState([]); 
 
   const router = useRouter()
   React.useEffect(function effectFunction() {
@@ -71,12 +71,12 @@ const Home = () => {
             })
             }
             fetchProduct();
-    }, [router]);
+    }, [router]);*/}
   return (
     <div className="container-fluid " style={{paddingRight:0,paddingLeft:0}}> 
       <Navbar />
      
-      {page.map((item,index) =>
+      {/*page.map((item,index) =>
         <Content_page 
         title={item.menuId.menuName}
         punchline=""
@@ -87,7 +87,7 @@ const Home = () => {
         productDetails={product}
         key={index}
       />
-       )}
+       )*/}
       
       
      
