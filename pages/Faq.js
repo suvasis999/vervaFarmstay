@@ -12,16 +12,16 @@ import Link from 'next/link';
 import Product from '../component/Product';
 import Hr from '../component/Hr';
 import FAQ from '../component/FAQ';
-
+import {localhost} from '../config/localhost';
  const Faq = () => {
     const [faqData, setfaqData] = React.useState([]);
     const [faqDataB, setfaqDataB] = React.useState(Sample_data.faqDataB);
     const [isOpen, toggleOpen] = React.useState(-1);
     React.useEffect(function effectFunction() {
       async function fetchFaq() {
-         // const url = `http://192.168.0.106/farm/api/Web_faq/allFaq`;
-         const url=`https://moodishare.com:443/farm/api/web_faq/allFaq`
-         
+          //const url=`http://localhost:80/farm/api/web_faq/allFaq`
+         const url=`${localhost}api/web_faq/allFaq`
+
           const res = await fetch(url, {
           method: 'GET',
           headers: {
@@ -101,8 +101,8 @@ import FAQ from '../component/FAQ';
               {faq.menu.map((faqSub, i)=>(
                 <div key={`item-${faqSub.webfaqid}`} className={`faq ${isOpen === faqSub.webfaqid ? 'open' : ''}`}>
                 <div className="faq-question" onClick={() => showTab(faqSub.webfaqid)}>{faqSub.faqtitle}</div>
-                <div className="faq-answer">{faqSub.faqdtls}</div>
                 
+                <div className="faq-answer" dangerouslySetInnerHTML={{ __html: faqSub.faqdtls }}></div>
                </div>
               ))}
             </>

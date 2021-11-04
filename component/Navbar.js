@@ -1,15 +1,16 @@
-
 import React, { useState, Fragment,useEffect  } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import {fetchApiProduct} from '../config/AppService';
+import {localhost} from '../config/localhost';
+
 import { NextPage, GetStaticProps } from 'next';
-  const Navbar= () =>{
-    const [menu, updateMenu] = React.useState([]);
+  const Navbar= (props) =>{
+    const [menu, updateMenu] = React.useState([]); 
  
     React.useEffect(function effectFunction() {
         async function fetchMenu() {
-            const url = `https://moodishare.com:443/farm/api/web_page/allPage`;
+            const url = `${localhost}api/web_page/allPage`;
             
             const res = await fetch(url, {
             method: 'GET',
@@ -21,6 +22,7 @@ import { NextPage, GetStaticProps } from 'next';
             }
             }).then(resp => resp.json())
             .then(Response => {
+               // console.log(Response);
                 if(Response.status==true){
                     updateMenu(Response.data.web_page); 
                 }
@@ -30,6 +32,7 @@ import { NextPage, GetStaticProps } from 'next';
                 
             })
             }
+           
             fetchMenu();
     }, []);
 
@@ -40,7 +43,7 @@ import { NextPage, GetStaticProps } from 'next';
         setColorchange(true);
         }
         else{
-        setColorchange(false);
+        setColorchange(true);
         }
     };
     if (typeof window !== "undefined") {
@@ -57,7 +60,7 @@ import { NextPage, GetStaticProps } from 'next';
 
 <nav  className={colorChange ? 'navbar colorChange navbar-expand-lg fixed-top  pe-sm-5 ps-sm-5 ' : 'navbar navbar-expand-lg fixed-top  pe-sm-5 ps-sm-5 '} >
 
-<img id="logo" className={colorChange ?'logoSmall':'logoBig'} src="images/LogoSample.png" />
+<img id="logo" className={colorChange ?'logoSmall':'logoBig'} src="/images/LogoSample.png" />
 <Link href="/">
 <a className="navbar-brand" href="#">VERVE FARMSTAY</a>
 </Link>
@@ -75,17 +78,17 @@ import { NextPage, GetStaticProps } from 'next';
                 {item.pageName}
                 </a>
               </Link>:
-              <Link href={"/" + item.pageSlug}>
-                <a  className="nav-link" href="#"  data-toggle={item.menu.length>1? "dropdown":""}>
+              <Link href={"/pages/" + item.pageSlug}>
+                <a  className="nav-link"   data-toggle={item.menu.length>1? "dropdown":""}>
                 {item.pageName}
                 </a>
               </Link>
-              
+               
              }
               {item.menu.length>1?
               <ul className="dropdown-menu " >
                 {item.menu.map((itemSubmenu,indexSubmenu) =>
-                 <li key={indexSubmenu.toString()}><Link href={"/" + itemSubmenu.menuSlog}>
+                 <li key={indexSubmenu.toString()}><Link href={"/page/" + itemSubmenu.menuSlog+"/"+itemSubmenu.menuId}>
                     <a className="dropdown-item" >{itemSubmenu.menuName}</a></Link></li>
                 )}
                 </ul>:''}

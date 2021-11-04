@@ -5,16 +5,49 @@ body{
 .navbar {
   padding: .5rem 1rem;
 }
-
+.image-gallery-slide .image-gallery-description {
+    background: rgba(0, 0, 0, 0.4);
+    bottom: 70px;
+    color: #fff;
+    left: 45%; // you can modify this value to center the text
+    line-height: 1;
+    padding: 10px 20px;
+    position: absolute;
+    white-space: normal;
+    justify-content: center;
+    align-items: center;
+}
 .HeaderImage{
-  height:100vh;color:white; background-image:  url('../images/agrback.jpg') ;
+height:150vh;
+
+  color:white; background-image:  url('../images/agrback.jpg') ;
    background-size: cover;filter: grayscale(70%);
 }
-
+.imgFlterGray{
+  filter: grayscale(70%);
+  background: linear-gradient(to bottom, rgba(21,112,67, .80) 30%, rgba(0,0,0, .80) 80%);
+}
+.product-des{
+  text-align: left;
+}
+.product-des li{
+      list-style-type: none;
+    text-align: left;
+    line-height: 30px;
+    cursor: pointer;
+}
+.product-des li:hover{
+      list-style-type: none;
+    text-align: left;
+    line-height: 30px;
+    color: red;
+}
 .navbar{
   background-color: transparent;
 }
-
+.pd-100{
+  padding: 100px 0px;
+}
 .navbar.colorChange{
   background-color: #478fe7;
 }
@@ -42,7 +75,7 @@ body{
   font-size: 40px;
   }
   .carousel-header{
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 300;
   }
   .aboutimg {

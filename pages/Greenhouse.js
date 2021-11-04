@@ -18,9 +18,7 @@ const Greenhouse = () => {
       <section className="homesec" id="topBan">
 		  <div className="my-auto d-none d-md-block text-center px-5 HeaderImage" style={{height: 24+'vh'}}>
             <p style={{height: '25%'}}></p>
-            
-            
-	       </div>
+          </div>
      </section>
      <Content
         bgImage='images/greenhouse.jpg'
