@@ -12,7 +12,7 @@ import Project from '../component/Project';
 import { useRouter } from 'next/router';
 import Content_page from '../component/Content_page';
 import {localhost} from '../config/localhost';
-const Index = () => {
+const Home = () => {
   const [page, setPage] = React.useState([]); 
     const [product, setProduct] = React.useState([]); 
 
@@ -45,6 +45,7 @@ const Index = () => {
             }
             fetchPage();
     }, [router]);
+
   React.useEffect(function effectFunction() {
      
         async function fetchProduct() {
@@ -98,4 +99,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Home;
