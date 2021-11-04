@@ -12,7 +12,7 @@ import Project from '../component/Project';
 import { useRouter } from 'next/router';
 import Content_page from '../component/Content_page';
 import {localhost} from '../config/localhost';
-const Home = () => {
+const index = () => {
  {/*} const [page, setPage] = React.useState([]); 
   const [product, setProduct] = React.useState([]); 
 
@@ -99,4 +99,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default index;
