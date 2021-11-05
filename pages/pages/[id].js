@@ -32,7 +32,7 @@ const BlogsbyId = () => {
     <div className="container-fluid " style={{paddingRight:0,paddingLeft:0}}>
       <Navbar bgColor={true}/> 
       <section className="homesec" id="topBan">
-		  <div className="my-auto d-none d-md-block text-center px-5 " 
+		  <div className="my-auto text-center px-5 " 
       style={{minHeight:450+'px',paddingTop: 100+'px'}}>
             <p style={{height: '25%'}}>{pageID} not found!!!</p>
 	      </div>
