@@ -32,7 +32,11 @@ import { NextPage, GetStaticProps } from 'next';
                 
             })
             }
-           
+            if(props.bgColor==true){
+              console.log('bgcolor is'+props.bgColor);
+              setColorchange(true);
+            }
+            
             fetchMenu();
     }, []);
 

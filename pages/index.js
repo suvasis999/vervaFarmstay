@@ -15,11 +15,12 @@ import {localhost} from '../config/localhost';
 const Home = () => {
 const [page, setPage] = React.useState([]); 
   const [product, setProduct] = React.useState([]); 
-
+ const [loader,setLoader]=React.useState([]);
   const router = useRouter()
   React.useEffect(function effectFunction() {
       
         async function fetchPage() {
+           setLoader(true);
            // const url = 'http://localhost:80/farm/api/web_content/all?X-Api-Key=EB896646B87A410E2F188E7FAD06CDE0&filters[0][co][0][fl]=menuId&filters[0][co][0][op]=equal&filters[0][co][0][vl]='+p2+'';
             const url=''+localhost+'api/web_content/all?X-Api-Key=EB896646B87A410E2F188E7FAD06CDE0&sort_order=ASC';
             const res = await fetch(url, {
@@ -36,9 +37,11 @@ const [page, setPage] = React.useState([]);
                console.log(Response.data.web_content);
                 if(Response.status==true){
                     setPage(Response.data.web_content); 
+                     setLoader(false);
                 }
                 else{
                     console.log("data not found");
+                     setLoader(false);
                 }
                 
             })
@@ -49,6 +52,7 @@ const [page, setPage] = React.useState([]);
   React.useEffect(function effectFunction() {
      
         async function fetchProduct() {
+           setLoader(true);
             //const url = 'http://localhost:80/farm/api/product_tbl/all?X-Api-Key=EB896646B87A410E2F188E7FAD06CDE0';
             const url=''+localhost+'api/product_tbl/all?X-Api-Key=EB896646B87A410E2F188E7FAD06CDE0';
             const res = await fetch(url, {
@@ -63,9 +67,12 @@ const [page, setPage] = React.useState([]);
              console.log(Response);
                 if(Response.status==true){
                     setProduct(Response.data.product_tbl); 
+                    setLoader(false);
+
                 }
                 else{
                     console.log("data not found");
+                     setLoader(false);
                 }
                 
             })
@@ -75,7 +82,13 @@ const [page, setPage] = React.useState([]);
   return (
     <div className="container-fluid " style={{paddingRight:0,paddingLeft:0}}> 
       <Navbar />
-     
+     {loader ? 
+         <div style={{minHeight: 450+'px',textAlign: 'center',paddingTop:160+'px'}}>
+        <img id="logo"  src="/images/loader.gif" style={{width:50+'px'}} />
+        
+        </div>
+        :
+          <div style={{minHeight: 300+'px'}}>
       {page.map((item,index) =>
         <Content_page 
         title={item.menuId.menuName}
@@ -88,6 +101,7 @@ const [page, setPage] = React.useState([]);
         key={index}
       />
        )}
+       </div>}
       
       
      

@@ -17,8 +17,10 @@ import {localhost} from '../config/localhost';
     const [faqData, setfaqData] = React.useState([]);
     const [faqDataB, setfaqDataB] = React.useState(Sample_data.faqDataB);
     const [isOpen, toggleOpen] = React.useState(-1);
+     const [loader,setLoader]=React.useState([]);
     React.useEffect(function effectFunction() {
       async function fetchFaq() {
+        setLoader(true);
           //const url=`http://localhost:80/farm/api/web_faq/allFaq`
          const url=`${localhost}api/web_faq/allFaq`
 
@@ -33,9 +35,11 @@ import {localhost} from '../config/localhost';
               if(Response.status==true){
                 console.log(Response.data.faq_page);
                 setfaqData(Response.data.faq_page); 
+                setLoader(false);
               }
               else{
                   console.log("data not found");
+                   setLoader(false);
               }
               
           })
@@ -79,7 +83,7 @@ import {localhost} from '../config/localhost';
 
     return (
     <div className="container-fluid " style={{paddingRight:0,paddingLeft:0}}>
-      <Navbar/>
+      <Navbar bgColor={true}/>
       <section className="homesec" id="topBan">
 		  <div className="my-auto d-none d-md-block text-center px-5 HeaderImage" style={{height: 24+'vh'}}>
             <p style={{height: '25%'}}></p>
@@ -87,8 +91,14 @@ import {localhost} from '../config/localhost';
             
 	       </div>
      </section>
-            
-            <div className="faqs">
+            {loader ? 
+              <div style={{minHeight: 450+'px',textAlign: 'center',paddingTop:160+'px'}}>
+        <img id="logo"  src="/images/loader.gif" style={{width:50+'px'}} />
+        
+        </div>
+               :
+                <div className="faqs">
+
             {faqData.map((faq, i) => (
               <>
               <h3 className="animated fadeInUp text-secondary " style={{paddingLeft:20+'px'}}>
@@ -108,6 +118,8 @@ import {localhost} from '../config/localhost';
             </>
             ))}
             </div>
+             }
+           
 
            
             <section className="homesec pt-5" id="Whoweare">

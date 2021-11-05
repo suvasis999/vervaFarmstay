@@ -96,12 +96,12 @@ const images = [
 const Gallery = () => {
   const [submitterName, setSubmitterName] = useState("");
   const router = useRouter();
-  
+
 
   return (
   
     <div className="container-fluid " style={{paddingRight:0,paddingLeft:0,}}>
-     <Navbar />
+     <Navbar bgColor={true}/>
      <div className="row" style={{marginRight:0,marginLeft:0,minHeight:300+'px',paddingBottom: 60+'px',paddingTop:100+'px'}}>
      
      <div className='col-md-8 mauto'>

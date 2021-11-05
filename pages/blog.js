@@ -4,7 +4,7 @@ import { Footer } from '../component/Footer';
 export default function Error() {
   return <>
   <div className="container-fluid " style={{paddingRight:0,paddingLeft:0}}>
-      <Navbar/>
+      <Navbar />
       <section className="homesec" id="topBan">
 		  <div className="my-auto d-none d-md-block text-center px-5 HeaderImage" style={{height: 20+'vh'}}>
             <p style={{height: '25%'}}></p>

@@ -13,7 +13,7 @@ function Content_page(props) {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           color:'white',
-          minHeight:600+'px'
+          minHeight:450+'px'
         }}
           >
             <p style={{height: '25%'}}></p>
@@ -47,7 +47,7 @@ function Content_page(props) {
            <div className="my-auto d-none d-md-block text-center px-5 pd-100"
            style={{  
            color:'black',
-           minHeight:600+'px'
+           minHeight:450+'px'
         }}
            >
             <p style={{height: '25%'}}></p>

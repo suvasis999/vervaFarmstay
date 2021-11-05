@@ -67,7 +67,7 @@ const Contact = () => {
   return (
   <>
     <div className="container-fluid " style={{paddingRight:0,paddingLeft:0,}}>
-     <Navbar/>
+     <Navbar bgColor={true}/>
      <div className="row" style={{marginRight:0,marginLeft:0}}>
      <div className="col-md-6"> 
      <main>{formVisible ? ContactForm : ConfirmationMessage}</main>
