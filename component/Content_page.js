@@ -7,7 +7,7 @@ function Content_page(props) {
         <section className="homesec" id="topBan">  
         {props.bg!=='NO'?
 
-		  <div className="my-auto d-none d-md-block text-center px-5 pd-100 "
+		  <div className="my-auto  text-center px-5 pd-100 "
           style={{  
           background: "linear-gradient(to bottom, rgba(21,112,67, .80) 30%, rgba(0,0,0, .80) 80%),  url(" +localhost+"uploads/web_content/" + props.bg +")",
           backgroundSize: 'cover',
@@ -44,7 +44,7 @@ function Content_page(props) {
              
             </div>
            :
-           <div className="my-auto d-none d-md-block text-center px-5 pd-100"
+           <div className="my-auto  text-center px-5 pd-100"
            style={{  
            color:'black',
            minHeight:450+'px'

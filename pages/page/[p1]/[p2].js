@@ -77,7 +77,7 @@ const Page = () => {
                      setLoader(false);
                 }
                 
-            })
+            }) 
             }
             fetchProduct();
     }, [router]);

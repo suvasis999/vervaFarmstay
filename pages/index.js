@@ -90,7 +90,7 @@ const [page, setPage] = React.useState([]);
         :
           <div style={{minHeight: 300+'px'}}>
       {page.map((item,index) =>
-        <Content_page 
+        <Content_page  
         title={item.menuId.menuName}
         punchline=""
         bg={item.contBg==''?'NO':item.contBg}

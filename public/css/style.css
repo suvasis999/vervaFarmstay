@@ -17,6 +17,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.homesec{
+
+}
 .HeaderImage{
 height:150vh;
 
@@ -607,4 +610,6 @@ align-items: center;
 	max-height: 1000px;
 	opacity: 1;
 }
+
+
 /*FAQ*/
