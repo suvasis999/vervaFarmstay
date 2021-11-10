@@ -84,14 +84,14 @@ Verve Consulting Private Limited<br/>
 HIG-32, BDA Colony, Jaydev Vihar,<br/> 
 Bhubaneshwar – 751013<br/>
 <img src='/images/map.png' width='25px' className='Mapimage'/>
-<a className="maplink" href='https://www.google.com/maps/place/Verve+Consulting/@20.2979995,85.8222502,17z/data=!3m1!4b1!4m5!3m4!1s0x3a1909c3c16a40e5:0xdfc4f111cd8d0731!8m2!3d20.2980222!4d85.8244254' target='_blank'>Click to Map</a><br/>
+<a className="maplink" href='https://www.google.com/maps/place/Verve+Consulting/@20.2979995,85.8222502,17z/data=!3m1!4b1!4m5!3m4!1s0x3a1909c3c16a40e5:0xdfc4f111cd8d0731!8m2!3d20.2980222!4d85.8244254' target='_blank' rel="noreferrer">Click to Map</a><br/>
                                                                                        
 <b>Bangalore Office</b><br/>
 Verve Consulting (StartupHaven),<br/>
 2nd floor, 128/1,<br/>
 Ulsoor Road, Bengaluru, 560042<br/>
 <img src='/images/map.png' width='25px' className='Mapimage'/>
-<a className="maplink" href='https://www.google.com/maps/search/Verve+Consulting+(StartupHaven),+2nd+floor,+128%2F1,+Ulsoor+Road,+Bengaluru,+560042/@12.9755498,77.6162093,18z/data=!3m1!4b1' target='_blank'>Click to Map</a><br/><br/>
+<a className="maplink" href='https://www.google.com/maps/search/Verve+Consulting+(StartupHaven),+2nd+floor,+128%2F1,+Ulsoor+Road,+Bengaluru,+560042/@12.9755498,77.6162093,18z/data=!3m1!4b1' target='_blank' rel="noreferrer">Click to Map</a><br/><br/>
 
         </div>
         <b>For placing orders and other queries regarding seedlings:</b><br/>
