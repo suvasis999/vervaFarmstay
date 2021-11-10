@@ -31,7 +31,7 @@ import {localhost} from '../config/localhost';
               "X-Api-Key":"EB896646B87A410E2F188E7FAD06CDE0"
           }
           }).then(resp => resp.json())
-          .then(Response => {
+          .then(Response => { 
               if(Response.status==true){
                 console.log(Response.data.faq_page);
                 setfaqData(Response.data.faq_page); 

@@ -47,7 +47,13 @@ import { NextPage, GetStaticProps } from 'next';
         setColorchange(true);
         }
         else{
-        setColorchange(true);
+          if(props.bgColor==true){ 
+            setColorchange(true);
+          }
+          else{
+            setColorchange(false);
+          }
+        
         }
     };
     if (typeof window !== "undefined") {
@@ -66,7 +72,7 @@ import { NextPage, GetStaticProps } from 'next';
 
 <img id="logo" className={colorChange ?'logoSmall':'logoBig'} src="/images/LogoSample.png" />
 <Link href="/">
-<a className="navbar-brand" href="#">VERVE FARMSTAY</a>
+<a className="navbar-brand" href="#" style={{color:'white'}}>VERVE FARMSTAY</a>
 </Link>
 <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
         <span className="navbar-toggler-icon"><i className="fa fa-bars"></i></span>

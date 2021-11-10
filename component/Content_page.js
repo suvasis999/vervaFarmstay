@@ -2,22 +2,25 @@ import React from 'react'
 import Product from './Product'; 
 import {localhost} from '../config/localhost';
 function Content_page(props) {
-    return (
+  return (
         <>
         <section className="homesec" id="topBan">  
         {props.bg!=='NO'?
+       
+        <div className="my-auto  text-center px-5 pd-100 "
 
-		  <div className="my-auto  text-center px-5 pd-100 "
-          style={{  
-          background: "linear-gradient(to bottom, rgba(21,112,67, .80) 30%, rgba(0,0,0, .80) 80%),  url(" +localhost+"uploads/web_content/" + props.bg +")",
+        
+          style={{ background: props.menuSlog =='aboutus'? "  url(" +localhost+"uploads/web_content/" + props.bg +")" : "linear-gradient(to bottom, rgba(21,112,67, .80) 30%, rgba(0,0,0, .80) 80%), url(" +localhost+"uploads/web_content/" + props.bg +")",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          color:'white',
-          minHeight:450+'px'
-        }}
+          color: 'white',
+          minHeight:props.menuSlog =='aboutus' ? 100+'vh' :450+'px',
+           filter: props.menuSlog =='aboutus' ? "grayscale(70%)" : "grayscale(0%)"
+        }} 
           >
+         
             <p style={{height: '25%'}}></p>
-	        <p className="animated fadeInDown delay-4s carousel-header">{props.title}</p> 
+	        <p className="animated fadeInDown delay-4s carousel-header">{props.title} </p> 
 	        <p className="animated fadeIn delay-4s px-5 " style={{fontWeight:400,fontSize:1.4+'rem'}} > {props.punchline}
             <a   style={{color:'white',textDecoration:'none'}}>  {props.url}</a></p>
             {props.thumb!=='NO'?

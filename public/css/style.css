@@ -1,6 +1,6 @@
   
 body{
-  background-image: url('../images/graybg.png');background-size: cover;
+  background-image: url('../images/graybg.png');background-size: contain;
 }
 .navbar {
   padding: .5rem 1rem;
@@ -16,6 +16,9 @@ body{
     white-space: normal;
     justify-content: center;
     align-items: center;
+}
+.grayImage{
+  filter:grayscale('70%')
 }
 .homesec{
 
@@ -39,12 +42,38 @@ height:150vh;
     line-height: 30px;
     cursor: pointer;
 }
+.footerStyle li a{
+   text-decoration: none;
+   color: white;
+}
+.maplink{
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: #478fe7;
+  margin-bottom: 10px;
+}
+.Mapimage{
+  margin-bottom: 5px;
+    margin-right: 10px;
+}
 .product-des li:hover{
       list-style-type: none;
     text-align: left;
     line-height: 30px;
-    color: red;
+    color: #478fe7;
 }
+.footerStyle{
+      display: inline-block;
+}
+.footerStyle li{
+list-style-type: none;
+width: 18px;
+display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
 .navbar{
   background-color: transparent;
 }

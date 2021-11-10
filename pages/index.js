@@ -90,16 +90,17 @@ const [page, setPage] = React.useState([]);
         :
           <div style={{minHeight: 300+'px'}}>
       {page.map((item,index) =>
-        <Content_page  
-        title={item.menuId.menuName}
-        punchline=""
-        bg={item.contBg==''?'NO':item.contBg}
-        details={item.contDtls}
-        thumb={item.thumbImg==''?'NO':item.thumbImg}
-        itemId={item.menuId.menuId}
-        productDetails={product}
-        key={index}
-      />
+            <Content_page  
+            title={item.menuId.menuName}
+            punchline=""
+            bg={item.contBg==''?'NO':item.contBg}
+            details={item.contDtls}
+            thumb={item.thumbImg==''?'NO':item.thumbImg}
+            itemId={item.menuId.menuId}
+            productDetails={product}
+            key={index}
+            menuSlog={item.menuSlog}
+          />
        )}
        </div>}
       

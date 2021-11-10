@@ -1,6 +1,8 @@
 import React, { useState, Fragment,useEffect  } from 'react';
 import {localhost} from '../config/localhost';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export const Footer = () => {
 	 const [menu, updateMenu] = React.useState([]); 
  
@@ -54,7 +56,22 @@ export const Footer = () => {
 		</div>
         </div>
 		<div className="my-auto" style={{backgroundColor: 'black'}}>
-			<p className="text-light text-center py-5">Copyright protected by Verve Farmstay, 2021</p>
+        <div className="text-light text-center">
+            <ul className="footerStyle">
+                <li><a href="https://www.facebook.com/Verve-Consulting-PvtLtd-175898305829471/" target="_blank">
+                <FontAwesomeIcon icon={['fab', 'facebook']}    />
+                </a></li>
+                <li>
+                <a href="https://www.linkedin.com/company/13184411/" target="_blank">
+                <FontAwesomeIcon icon={['fab', 'linkedin']}    />
+                 </a>
+                </li>
+            </ul>
+             
+             
+        </div>
+       
+<p className="text-light text-center py-5">Copyright protected by Verve Farmstay, 2021</p>
 		</div>
 	</footer>
 
